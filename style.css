@@ -1,0 +1,46 @@
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+    text-transform: uppercase;
+    background-color:greenyellow;
+}
+.container {
+    width: 100%;
+  }
+  
+  .header {
+    background-color: #ccc;
+    padding: 20px;
+    text-transform: uppercase;
+  }
+  
+  .column-container {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+
+  .container_1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .column {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #dc1717;
+  }
+  .header {
+    grid-column: 1 / span 3;
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    
+  }
+    
