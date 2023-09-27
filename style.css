@@ -1,50 +1,79 @@
+/*DISPLAY FLEX*/
 .title h1 {
-    padding: 20px 0;
-    text-align: center;
-    font-size: 2.9em;
-    text-transform: uppercase;
-    background-color:greenyellow;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.9em;
+  text-transform: uppercase;
+  background-color: rgb(232, 237, 225);
+}
+.header {
+  background-color: #ccc;
+  padding: 20px;
 }
 .container {
-    width: 100%;
-  }
-  
-  .header {
-    background-color: #ccc;
-    padding: 20px;
-  }
-  
-  .column-container {
-    display: flex;
-  }
-  
-  .column {
-    flex: 1;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border: 1px solid #ddd;
+  width: 100%;
+  background-color: #ef6464;
+}
+.column-container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 10px;
+}
+/*DISPLAY GRID*/
+.header {
+  grid-column: 1 / span 3;
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+.container_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  background-color: #b07373;
+}
+.column {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #dc1717;
+}
+.footer {
+  grid-column: 1 / span 3;
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+.cen {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(208, 230, 230);
+}
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
   }
 
-  .container_1 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  .column {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border: 1px solid #dc1717;
-  }
   .header {
-    grid-column: 1 / span 3;
-    background-color: #ccc;
-    padding: 20px;
-    text-align: center;
-     }
-     .footer {
-      grid-column: 1 / span 3;
-      background-color: #ccc;
-      padding: 20px;
-      text-align: center;
-       }
-    
+    grid-column: 1;
+  }
+}
+
+/* Media queries para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  .column {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .container_1 {
+    grid-template-columns: 1fr;
+  }
